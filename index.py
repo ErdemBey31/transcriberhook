@@ -9,7 +9,8 @@ aai.settings.api_key = "059b26e05fda420a9612d5aeb4bad83f"
 config = aai.TranscriptionConfig(language_code="tr")
 transcriber = aai.Transcriber(config=config)
 
-bot_token, YOUR_BOT_TOKEN = "6765509934:AAGIpSWslGRGlLlvWgjHg3q02f3QOnYdOFI"
+bot_token = "6765509934:AAGIpSWslGRGlLlvWgjHg3q02f3QOnYdOFI"
+YOUR_BOT_TOKEN = bot_token
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
