@@ -62,7 +62,7 @@ def download_file(file_id):
             file_url = f"https://api.telegram.org/file/bot{YOUR_BOT_TOKEN}/{file_path}"
             response = requests.get(file_url)
             if response.status_code == 200:
-                with open(file_path, 'wb') as file:
+                with open(file_path, 'w+') as file:
                     file.write(response.content)
     return file_path
 
