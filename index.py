@@ -31,7 +31,9 @@ def translate_text(text):
     response = requests.get(f"""https://codingllama.codingteamapi.workers.dev/?token=CTAPI-038AXEXYbdOjvRotvRCPXWiBvv&question=Merhaba! Çeviri konusunda yardımınıza ihtiyacım var. Auto-dedected bir metni Türkçeye çevirmeniz mümkün mü? Metni aşağıda bulabilirsiniz:
 
 {text}
-Çevirinizi bekliyor olacağım. Teşekkür ederim!"""\n\n{text}")
+Çevirinizi bekliyor olacağım. Teşekkür ederim!
+
+text}""")
     translation = response.json().get('bot')
     return translation
 
