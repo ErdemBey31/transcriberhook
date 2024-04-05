@@ -28,12 +28,21 @@ def get_message_text(message):
         return ''
 
 def translate_text(text):
-    response = requests.get(f"""https://codingllama.codingteamapi.workers.dev/?token=CTAPI-038AXEXYbdOjvRotvRCPXWiBvv&question=Merhaba! Çeviri konusunda yardımınıza ihtiyacım var. Auto-dedected bir metni Türkçeye çevirmeniz mümkün mü? Metni aşağıda bulabilirsiniz:
+    response = requests.get(f"""https://codingllama.codingteamapi.workers.dev/?token=CTAPI-038AXEXYbdOjvRotvRCPXWiBvv&""", data={'question': """
+Merhaba, ben GPT, dil çevirmeninizim! Size çeşitli diller arasında akıcı bir şekilde çeviri yapabilirim. Metinleri veya cümleleri hızlı ve doğru bir şekilde çevirebilir, iletişim engellerini aşmanıza yardımcı olabilirim.
 
-{text}
-Çevirinizi bekliyor olacağım. Teşekkür ederim!
+Sadece bana çevirmemi istediğiniz metni veya cümleyi verin, ardından hedef dilinizi belirtin. İngilizce'den İspanyolca'ya, Fransızca'dan Almanca'ya veya herhangi bir dilden başka bir dile, çeviri ihtiyaçlarınızı karşılamak için buradayım.
 
-""")
+Ayrıca, konuşma çevirisi için de kullanılabilirim. Bir toplantıda, konferansta veya hatta günlük sohbetlerde size eşlik edebilirim. Söylediklerinizi anlayıp, hızlıca çevirerek dil bariyerlerini ortadan kaldırabilirim.
+
+Benimle etkileşim kurmak için sadece metni yazmanız yeterli. Size dil becerilerimle yardımcı olmak için buradayım. İhtiyaç duyduğunuzda, anında çeviri yapmak için beni çağırabilirsiniz.
+
+Unutmayın, dil çevirisi konusunda her zaman yanınızdayım. Sizin için gerekli olan doğru ve anlaşılır çevirileri sunmak için buradayım.
+
+
+METİN = 
+
+{text}""")
     translation = response.json().get('bot')
     return translation
 
