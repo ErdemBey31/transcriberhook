@@ -33,7 +33,7 @@ def translate_text(text):
 {text}
 Çevirinizi bekliyor olacağım. Teşekkür ederim!
 
-text}""")
+{text}""")
     translation = response.json().get('bot')
     return translation
 
