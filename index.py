@@ -28,7 +28,7 @@ def get_message_text(message):
         return ''
 
 def translate_text(text):
-    response = requests.get(f"""https://codingllama.codingteamapi.workers.dev/?token=CTAPI-038AXEXYbdOjvRotvRCPXWiBvv&""", data={'question': """
+    response = requests.post(f"""https://codingllama.codingteamapi.workers.dev/?token=CTAPI-038AXEXYbdOjvRotvRCPXWiBvv&""", params={'question': """
 Merhaba, ben GPT, dil çevirmeninizim! Size çeşitli diller arasında akıcı bir şekilde çeviri yapabilirim. Metinleri veya cümleleri hızlı ve doğru bir şekilde çevirebilir, iletişim engellerini aşmanıza yardımcı olabilirim.
 
 Sadece bana çevirmemi istediğiniz metni veya cümleyi verin, ardından hedef dilinizi belirtin. İngilizce'den İspanyolca'ya, Fransızca'dan Almanca'ya veya herhangi bir dilden başka bir dile, çeviri ihtiyaçlarınızı karşılamak için buradayım.
