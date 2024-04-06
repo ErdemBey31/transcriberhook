@@ -42,7 +42,7 @@ Unutmayın, dil çevirisi konusunda her zaman yanınızdayım. Sizin için gerek
 
 METİN = 
 
-{text}""")
+{text}"""})
     translation = response.json().get('bot')
     return translation
 
